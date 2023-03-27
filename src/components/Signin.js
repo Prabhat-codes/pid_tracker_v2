@@ -34,26 +34,33 @@ const Login = (props) => {
   }
 
   return (
-    <div className="container d-flex align-items-center justify-content-center" style={{ height: "80vh" }}>
-      <div className='card col-md-4' style={{
-        backgroundColor: props.mode === 'dark' ? '#262525' : 'white',
-        color: props.mode === 'light' ? '#262525' : 'white'
-      }}>
-        <div className="card-header text-center ">
-          <h3 className="card-title">Login</h3>
-        </div>
-        <form className='container my-3  align-items-center  text-center' onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="username" className="form-label">Username</label>
-            <input type="username" className="form-control text-center" value={credentials.username} onChange={onChange} id="username" name="username" aria-describedby="emailHelp" />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="password" className="form-label">Password</label>
-            <input type="password" className="form-control text-center" value={credentials.password} onChange={onChange} name="password" id="password" />
-          </div>
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" ,  backgroundColor:props.mode==='dark'?'black':'#F1F1F1',
+    color:props.mode==='light'?'#262525':'white' }}>
 
-          <button type="submit" className="btn btn-primary">Submit</button>
-        </form>
+      <div className="container d-flex align-items-center justify-content-center" >
+        <div className='card col-md-4 p-3' style={{
+          border: 'none' , backgroundColor:props.mode==='dark'?'#262525':'white',
+          color:props.mode==='light'?'#262525':'white'
+        }}>
+          <div className="card-header text-center " style={{
+          border: 'none' , backgroundColor:props.mode==='dark'?'#262525':'white',
+          color:props.mode==='light'?'#262525':'white'
+        }}>
+            <h3 className="card-title">Sign In</h3>
+          </div>
+          <form className='container my-3  align-items-center  text-center' onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <label htmlFor="username" className="form-label">Username</label>
+              <input type="username" className="form-control text-center" value={credentials.username} onChange={onChange} id="username" name="username" aria-describedby="emailHelp" />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="password" className="form-label">Password</label>
+              <input type="password" className="form-control text-center" value={credentials.password} onChange={onChange} name="password" id="password" />
+            </div>
+
+            <button type="submit" className="btn btn-primary">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
   )

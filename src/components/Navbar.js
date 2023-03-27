@@ -6,7 +6,7 @@ const Navbar = (props) => {
   // console.log(location);
   return (
     <div>
-      <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
+      <nav className={`navbar navbar-expand-lg navbar-${props.mode} `}>
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">Wells Fargo</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse"

@@ -33,10 +33,17 @@ const SignUp = (props) => {
         setCredentials({...credentials, [e.target.name]: e.target.value})
     }
   return (
-    <div className="container d-flex align-items-center justify-content-center my-4" style={{ height: "80vh" }} >
-    <div className='card col-md-4' style={{backgroundColor:props.mode==='dark'?'#262525':'white',
-        color:props.mode==='light'?'#262525':'white' }}>
-        <div className="card-header text-center">
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" ,  backgroundColor:props.mode==='dark'?'black':'#F1F1F1'}}>
+        
+    <div className="container d-flex align-items-center justify-content-center my-4"  >
+    <div className='card col-md-4 p-3' style={{
+          border: 'none' , backgroundColor:props.mode==='dark'?'#262525':'white',
+          color:props.mode==='light'?'#262525':'white'
+        }}>
+        <div className="card-header text-center" style={{
+          border: 'none' , backgroundColor:props.mode==='dark'?'#262525':'white',
+          color:props.mode==='light'?'#262525':'white'
+        }}>
             <h3 className="card-title">Sign Up</h3>
         </div>
             <form className='container my-3 align-items-center  text-center'  onSubmit={handleSubmit}>
@@ -58,6 +65,7 @@ const SignUp = (props) => {
             </form>
         </div>
     </div>
+            </div>
   )
 }
 

@@ -8,11 +8,11 @@ import Signup from './components/Signup';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
-  const [mode, setMode] = useState('dark')
+  const [mode, setMode] = useState('light')
   const [btnText, setbtnText] = useState('Enable dark Mode')
 
   const toggleMode = () => {
-    console.log(mode)
+    // console.log(mode)
     if (mode === 'light') {
       setMode('dark')
       document.body.style.backgroundColor = 'black'
