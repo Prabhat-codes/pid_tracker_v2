@@ -1,17 +1,17 @@
-import React, {useRef} from 'react'
+import React from 'react'
 import File from './File'
+import UploadModal from './UploadModal';
 const UploadFile = (props) => {
-  const fileInputRef=useRef();
-    const handleChange=(e)=>{
-    console.log(e.target.files[0])
-    }
-  return(
+  const myStyle={border: "none", backgroundColor: props.mode === 'dark' ? 'black' : 'white',color: props.mode === 'light' ? 'black' : 'white'}
+
+  return (
     <>
-      <button onClick={()=>fileInputRef.current.click()} style={{border:"none", backgroundColor: props.mode === 'dark' ? 'black' : 'white',
-        color: props.mode === 'light' ? 'black' : 'white'}}>
+      {/* Button to upload file */}
+      <button  className="btn" style={myStyle} data-bs-toggle="modal" data-bs-target="#exampleModal">
         <File title="Upload File" mode={props.mode} />
+        <UploadModal mode={props.mode}/>
       </button>
-      <input onChange={handleChange} multiple={false} ref={fileInputRef} type='file' hidden/>
+      {/* Modal */}
     </>
   )
 }

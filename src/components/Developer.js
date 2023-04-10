@@ -4,13 +4,12 @@ import { useState } from 'react'
 import UploadFile from './UploadFile'
 const Developer = (props) => {
   const [files, setFiles] = useState([{ title: "File1" }, { title: "File2" }, { title: "File2" }, { title: "File3" }, { title: "File3" }, { title: "File2" }, { title: "File2" }, { title: "File2" }, { title: "File2" }, { title: "File2" }]);
+  const myStyle={border: "none", backgroundColor: props.mode === 'dark' ? 'black' : 'white',color: props.mode === 'light' ? 'black' : 'white'}
+
   return (
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
       {/* Header */}
-      <h1 style={{
-        backgroundColor: props.mode === 'dark' ? 'black' : 'white',
-        color: props.mode === 'light' ? '#262525' : 'white'
-      }}>Developer</h1>
+      <h1 style={myStyle}>Developer</h1>
 
       {/* Upload File */}
       <div style={{backgroundColor: props.mode === 'dark' ? 'black' : 'white',color: props.mode === 'light' ? '#262525' : 'white'}}>
