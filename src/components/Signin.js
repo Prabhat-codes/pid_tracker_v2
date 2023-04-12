@@ -34,18 +34,20 @@ const Login = (props) => {
   }
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" ,  backgroundColor:props.mode==='dark'?'black':'#F1F1F1',
-    color:props.mode==='light'?'#262525':'white' }}>
+    <div style={{
+      display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", backgroundColor: props.mode === 'dark' ? 'black' : '#F1F1F1',
+      color: props.mode === 'light' ? '#262525' : 'white'
+    }}>
 
       <div className="container d-flex align-items-center justify-content-center" >
         <div className='card col-md-4 p-3' style={{
-          border: 'none' , backgroundColor:props.mode==='dark'?'#262525':'white',
-          color:props.mode==='light'?'#262525':'white'
+          border: 'none', backgroundColor: props.mode === 'dark' ? '#262525' : 'white',
+          color: props.mode === 'light' ? '#262525' : 'white'
         }}>
           <div className="card-header text-center " style={{
-          border: 'none' , backgroundColor:props.mode==='dark'?'#262525':'white',
-          color:props.mode==='light'?'#262525':'white'
-        }}>
+            border: 'none', backgroundColor: props.mode === 'dark' ? '#262525' : 'white',
+            color: props.mode === 'light' ? '#262525' : 'white'
+          }}>
             <h3 className="card-title">Sign In</h3>
           </div>
           <form className='container my-3  align-items-center  text-center' onSubmit={handleSubmit}>
